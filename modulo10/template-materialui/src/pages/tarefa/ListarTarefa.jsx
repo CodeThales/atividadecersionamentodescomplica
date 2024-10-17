@@ -85,15 +85,15 @@ const ListarTarefa = () => {
     <>
     <Card>
         <CardHeader
-          title="Tarefas"
-          subheader="Listagem de Tarefas"
+          title="Tarefas do Thales"
+          subheader="Listagem de Tarefas do Thales"
         /> 
         <CardContent>
             <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
                 <TableHead>
                 <TableRow>
-                    <TableCell>#</TableCell>
+                    <TableCell>ID</TableCell>
                     <TableCell>Título</TableCell>
                     <TableCell align="right">Descrição</TableCell>
                     <TableCell align="right">Data de Início</TableCell>
@@ -122,10 +122,10 @@ const ListarTarefa = () => {
                       <TableCell align="right">{row.statusTarefa}</TableCell>
                       <TableCell align="right">{row.recursoTarefa}</TableCell>
                       <TableCell align="center">
-                        <Button variant="contained" color="success" onClick={() => handleEditar(row.idTarefa)}><EditIcon fontSize="small" /></Button>            
+                        <Button variant="contained" color="secondary" onClick={() => handleEditar(row.idTarefa)}><EditIcon fontSize="small" /></Button>            
                       </TableCell>
                       <TableCell align="center">
-                        <Button variant="contained" color="error" onClick={() => handleDeletar(row.idTarefa)}><DeleteIcon fontSize="small" /></Button>            
+                        <Button variant="contained" color="warning" onClick={() => handleDeletar(row.idTarefa)}><DeleteIcon fontSize="small" /></Button>            
                       </TableCell>
                     </TableRow>
                 ))}
@@ -135,7 +135,7 @@ const ListarTarefa = () => {
         </CardContent>
         <CardActions>
             <Button size="small" variant="contained" onClick={handleOpen}>Criar Tarefa</Button>
-            <Button size="small" variant="outlined">Cancelar</Button>
+            <Button size="small" variant="outlined" color='error'>Cancelar</Button>
       </CardActions> 
     </Card>
     <div>
